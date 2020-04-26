@@ -7,8 +7,9 @@ import './homepage.scss';
 const HomePage = () => 
    (
     <div className="homepage">
-        <h2>hooooo router</h2>
+        <h2>hooooo router </h2>
           <Directory />
+
     </div>
   );
 
