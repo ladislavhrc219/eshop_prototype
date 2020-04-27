@@ -8,13 +8,13 @@ const SHOP_DATA = [
         {
           id: 1,
           name: 'Iphone 6',
-          imageUrl: 'https://pngimg.com/uploads/iphone/iphone_PNG5723.png',
+          imageUrl: 'https://www.stickpng.com/assets/images/585fd18fcb11b227491c35d3.png',
           price: 499
         },
         {
           id: 2,
           name: 'Iphone 6S',
-          imageUrl: 'https://pngimg.com/uploads/iphone/iphone_PNG5723.png',
+          imageUrl: 'https://pngimg.com/uploads/iphone/iphone_PNG5722.png',
           price: 549
         },
         {
@@ -173,13 +173,13 @@ const SHOP_DATA = [
         {
           id: 25,
           name: 'Iphone SE ',
-          imageUrl: 'https://pngimg.com/uploads/iphone/iphone_PNG5723.png',
+          imageUrl: 'https://pngimg.com/uploads/iphone_11/iphone_11_PNG33.png',
           price: 80
         },
         {
           id: 26,
           name: 'Iphone XR ',
-          imageUrl: 'https://png.pngtree.com/png-clipart/20190516/original/pngtree-iphonexsmaxgold-png-image_3627549.jpg',
+          imageUrl: 'https://banner2.cleanpng.com/20180327/kge/kisspng-iphone-x-iphone-8-plus-iphone-7-samsung-galaxy-tel-iphone-x-5ab9ec6e4ea185.7182771215221341263221.jpg',
           price: 80
         },
         {

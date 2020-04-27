@@ -1,12 +1,12 @@
 import React from 'react';
 import './collection-preview.scss';
 
-
+import CollectionItem from '../collection-item/collection-item.component.jsx';
 
 // need to figure out what we gnna pass in 
 // wanna pass in the title in this example 
 // also wanna .map() over an items array 
-// you dnt know what to pass in the map?:
+// you dnt know what to pass in the  map?:
 // its jsut {launches.map(launch=( {launch.mission-name}))}
 
 const CollectionPreview =( {title, items}) => (
@@ -16,8 +16,8 @@ const CollectionPreview =( {title, items}) => (
         {
             items
             .filter((item, idx)=> idx < 4)
-            .map(item=>(
-                <div key={item.id}> {item.name} </div>
+            .map(({id, ...otherItemProps})=>(
+                <CollectionItem key={id} {...otherItemProps} />
             ))}
 
         </div> 
