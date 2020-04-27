@@ -1,0 +1,30 @@
+.header {
+    background-color: forestgreen;
+    height: 111px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    // padding-right: 20px;
+  
+    .logo-container {
+        background-color: magenta;
+      height: 100%;
+      width: 110px;
+      padding: 15px;
+    }
+  
+    .options {
+        background-color: fuchsia;
+        // padding-right: 
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+        
+      .option {
+        padding: 10px 15px;
+      }
+    }
+  }
