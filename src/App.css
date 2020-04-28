@@ -1,4 +1,10 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     padding: 20px 80px;
+    background-color: darkolivegreen;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-size: 2rem;
 }
