@@ -1,4 +1,5 @@
 import firebase from "firebase/app";
+// import * as firebase from "firebase/app";
 // we need the base import firebase, it gives us access to firestore and auth, they are automatically attached to firebase
 // need auth and storage 
 import 'firebase/firestore';
@@ -30,7 +31,7 @@ export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
 
-firebase.initializeApp(config);
-
+// firebase.initializeApp(config);
+// export default !firebase.apps.length ? firebase.initializeApp(config) : firebase.app();
 
 
