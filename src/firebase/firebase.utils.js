@@ -16,6 +16,35 @@ const config = {
     measurementId: "G-JQ40NBKWGL"
 };
 
+// function to take a user auth object that we git back from out authentication library. 
+// and store that inside of out database
+// asynconous thing because we making an API request 
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+    if (!userAuth) return;
+  
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
+  
+    const snapShot = await userRef.get();
+  
+    if (!snapShot.exists) {
+      const { displayName, email } = userAuth;
+      const createdAt = new Date();
+      try {
+        await userRef.set({
+          displayName,
+          email,
+          createdAt,
+          ...additionalData
+        });
+      } catch (error) {
+        console.log('error creating user', error.message);
+      }
+    }
+  
+    return userRef;
+  };
+
+
 // after inserting the object we call
 firebase.initializeApp(config);
 
