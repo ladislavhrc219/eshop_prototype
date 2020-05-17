@@ -5,11 +5,13 @@ import './header.scss';
 
 import { connect } from 'react-redux';
 
+import CartIcon from './../cart-icon/cart-icon.component';
+import CartDropDown from './../cart-dropdown/cart-dropdown.component';
 
 import {auth} from './../../firebase/firebase.utils';
 
 // destructute currentUser property
-const Header = ({currentUser}) => (
+const Header = ({currentUser, hidden}) => (
     <div className='header'>
          <Link className="logo-container" to="/">
             <Logo className="logo" />
@@ -27,12 +29,22 @@ const Header = ({currentUser}) => (
             :
             (<Link className='option' to='/signin'> SIGN IN </Link>)
             }
+            <CartIcon/>
+            
          </div>
+         { //ussing ternary operator
+             hidden ? null :
+         <CartDropDown />}
     </div>
 )
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+
+//need to destructure the state 
+// from the sate want user:currentUser
+                            //instead of state
+const mapStateToProps = ({user: {currentUser}, cart: {hidden} }) => ({
+    currentUser,
+     hidden
   });
 
 
