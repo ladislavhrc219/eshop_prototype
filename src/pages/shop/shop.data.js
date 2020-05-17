@@ -67,49 +67,49 @@ const SHOP_DATA = [
       routeName: 'samsung',
       items: [
         {
-          id: 10,
+          id: 11,
           name: 'Galaxy S20',
           imageUrl: 'https://krispitech.com/wp-content/uploads/2020/02/s20-4-Copy-3.png',
           price: 220
         },
         {
-          id: 11,
+          id: 12,
           name: 'Galaxy S20 5G',
           imageUrl: 'https://krispitech.com/wp-content/uploads/2020/02/s20-4-Copy-3.png',
           price: 280
         },
         {
-          id: 12,
+          id: 13,
           name: 'Galaxy S20+ 5G',
           imageUrl: 'https://krispitech.com/wp-content/uploads/2020/02/s20-4-Copy-3.png',
           price: 110
         },
         {
-          id: 13,
+          id: 14,
           name: 'Galaxy S20+ Pro 5G Pro',
           imageUrl: 'https://krispitech.com/wp-content/uploads/2020/02/s20-4-Copy-3.png',
           price: 160
         },
         {
-          id: 14,
+          id: 15,
           name: 'Samsung Galaxy A90',
           imageUrl: 'https://www.pngitem.com/pimgs/m/274-2744015_samsung-galaxy-a70-coming-to-us-samsung-a70.png',
           price: 899
         },
         {
-          id: 15,
+          id: 16,
           name: 'Samsung Galaxy A70',
           imageUrl: 'https://www.pngitem.com/pimgs/m/274-2744015_samsung-galaxy-a70-coming-to-us-samsung-a70.png',
           price: 699
         },
         {
-          id: 16,
+          id: 17,
           name: 'Samsung Galaxy A50',
           imageUrl: 'https://www.pngitem.com/pimgs/m/274-2744015_samsung-galaxy-a70-coming-to-us-samsung-a70.png',
           price: 499
         },
         {
-          id: 17,
+          id: 18,
           name: 'Samsung Galaxy A30',
           imageUrl: 'https://stg-images.samsung.com/is/image/samsung/pk-galaxy-a30-a305-sm-a305fzwfpak-frontwhite-thumb-152051809',
           price: 299
@@ -122,19 +122,19 @@ const SHOP_DATA = [
       routeName: 'googlepixel',
       items: [
         {
-          id: 18,
+          id: 19,
           name: 'Pixel 4',
           imageUrl: 'https://www.androidred.com/wp-content/uploads/2019/05/pixel-3a-revealed-entirely-before-google-says-it-exists-525923-2.png',
           price: 699
         },
         {
-          id: 19,
+          id: 20,
           name: 'Pixel 3a XL',
           imageUrl: 'https://www.androidred.com/wp-content/uploads/2019/05/pixel-3a-revealed-entirely-before-google-says-it-exists-525923-2.png',
           price: 499
         },
         {
-          id: 20,
+          id: 22,
           name: 'Pixel 3a',
           imageUrl: 'https://www.androidred.com/wp-content/uploads/2019/05/pixel-3a-revealed-entirely-before-google-says-it-exists-525923-2.png',
           price: 399
@@ -146,7 +146,7 @@ const SHOP_DATA = [
           price: 285
         },
         {
-          id: 22,
+          id: 23,
           name: 'Pixel 3',
           imageUrl: 'https://www.androidred.com/wp-content/uploads/2019/05/pixel-3a-revealed-entirely-before-google-says-it-exists-525923-2.png',
           price: 185
@@ -159,43 +159,43 @@ const SHOP_DATA = [
       routeName: 'appleios',
       items: [
         {
-          id: 23,
+          id: 27,
           name: 'Iphone 11 ',
           imageUrl: 'https://pngimg.com/uploads/iphone_11/iphone_11_PNG33.png',
           price: 25
         },
         {
-          id: 24,
+          id: 28,
           name: 'Iphone 11 Pro',
           imageUrl: 'https://pngimg.com/uploads/iphone_11/iphone_11_PNG39.png',
           price: 20
         },
         {
-          id: 25,
+          id: 29,
           name: 'Iphone SE ',
           imageUrl: 'https://pngimg.com/uploads/iphone_11/iphone_11_PNG33.png',
           price: 80
         },
         {
-          id: 26,
+          id: 230,
           name: 'Iphone XR ',
           imageUrl: 'https://banner2.cleanpng.com/20180327/kge/kisspng-iphone-x-iphone-8-plus-iphone-7-samsung-galaxy-tel-iphone-x-5ab9ec6e4ea185.7182771215221341263221.jpg',
           price: 80
         },
         {
-          id: 27,
+          id: 31,
           name: 'Iphone X',
           imageUrl: 'https://png.pngtree.com/png-clipart/20190516/original/pngtree-iphonexsmaxgold-png-image_3627549.jpg',
           price: 45
         },
         {
-          id: 28,
+          id: 332,
           name: 'Iphone 8',
           imageUrl: 'https://pngimg.com/uploads/iphone/iphone_PNG5723.png',
           price: 135
         },
         {
-          id: 29,
+          id: 324,
           name: 'Iphone 7',
           imageUrl: 'https://pngimg.com/uploads/iphone/iphone_PNG5723.png',
           price: 20
@@ -208,37 +208,37 @@ const SHOP_DATA = [
       routeName: 'android',
       items: [
         {
-          id: 30,
+          id: 340,
           name: 'Pixel 4',
           imageUrl: 'https://www.androidred.com/wp-content/uploads/2019/05/pixel-3a-revealed-entirely-before-google-says-it-exists-525923-2.png',
           price: 325
         },
         {
-          id: 31,
+          id: 341,
           name: 'Pixel 4a',
           imageUrl: 'https://www.androidred.com/wp-content/uploads/2019/05/pixel-3a-revealed-entirely-before-google-says-it-exists-525923-2.png',
           price: 20
         },
         {
-          id: 32,
+          id: 342,
           name: 'Pixel 3a',
           imageUrl: 'https://www.androidred.com/wp-content/uploads/2019/05/pixel-3a-revealed-entirely-before-google-says-it-exists-525923-2.png',
           price: 25
         },
         {
-          id: 33,
+          id: 343,
           name: 'Samsung S20 Pro 5G',
           imageUrl: 'https://krispitech.com/wp-content/uploads/2020/02/s20-4-Copy-3.png',
           price: 25
         },
         {
-          id: 34,
+          id: 344,
           name: 'Samsung S20',
           imageUrl: 'https://krispitech.com/wp-content/uploads/2020/02/s20-4-Copy-3.png',
           price: 40
         },
         {
-          id: 35,
+          id: 354,
           name: 'Samsung S10',
           imageUrl: 'https://krispitech.com/wp-content/uploads/2020/02/s20-4-Copy-3.png',
           price: 25
