@@ -20,3 +20,9 @@ export const clearItemFromCart = item => ({
   payload: item
 });
 //need to update reducer so gets the appropriate array
+
+// 127:
+export const removeItem = item => ({
+  type: CartActionTypes.REMOVE_ITEM,
+  payload: item
+});

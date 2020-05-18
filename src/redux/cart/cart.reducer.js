@@ -1,5 +1,5 @@
 import CartActionTypes from './cart.types';
-import {addItemToCart} from './cart.utils';
+import {addItemToCart, removeItemFromCart} from './cart.utils';
 // import CartItem from '../../components/cart-item/cart-item.component';
 // import {selectCartItems} from 'cart.selectors';
 
@@ -25,6 +25,12 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         // cartItems: [...state.cartItems, action.payload] //item coming in goin to be the payload on our acton
         // replacing the above code with:
         cartItems: addItemToCart(state.cartItems, action.payload)
+      };
+      //127: first write in types, then create actions, update reducer
+      case CartActionTypes.REMOVE_ITEM:
+      return {
+        ...state,
+        cartItems: removeItemFromCart(state.cartItems, action.payload)
       };
       //126: 
       //bind it to checkout component:
