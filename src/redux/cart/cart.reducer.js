@@ -1,5 +1,7 @@
 import CartActionTypes from './cart.types';
 import {addItemToCart} from './cart.utils';
+// import CartItem from '../../components/cart-item/cart-item.component';
+// import {selectCartItems} from 'cart.selectors';
 
 // need initial state
 const INITIAL_STATE = {
@@ -24,6 +26,16 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         // replacing the above code with:
         cartItems: addItemToCart(state.cartItems, action.payload)
       };
+      //126: 
+      //bind it to checkout component:
+      case CartActionTypes.CLEAR_ITEM_FROM_CART:
+        
+          return {
+            ...state,
+            cartItems: state.cartItems.filter(
+              cartItem => cartItem.id !== action.payload.id
+            )
+          };
     default:
       return state;
   }
