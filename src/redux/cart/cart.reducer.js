@@ -1,5 +1,5 @@
 import CartActionTypes from './cart.types';
-import {addItemToCart} from 'cart.utils';
+import {addItemToCart} from './cart.utils';
 
 // need initial state
 const INITIAL_STATE = {
