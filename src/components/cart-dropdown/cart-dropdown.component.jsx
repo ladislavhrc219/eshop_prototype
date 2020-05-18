@@ -1,9 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { withRouter } from 'react-router-dom';
+
+
 //need the custom button
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
+import {toggleCartHidden} from '../../redux/cart/cart.actions';
 
 
 import './cart-dropdown.scss';
@@ -16,14 +21,38 @@ import './cart-dropdown.scss';
 //   </div>
 // );
 //destructure cartItems
-const CartDropdown = ({ cartItems }) => (
+// const CartDropdown = ({ cartItems }) => (
+//   <div className='cart-dropdown'>
+//     <div className='cart-items'>
+//       {cartItems.map(cartItem => (  //map  it out 
+//         <CartItem key={cartItem.id} item={cartItem} />
+//       ))}
+//     </div>
+//     <CustomButton>GO TO CHECKOUT</CustomButton>
+//   </div>
+// );
+
+const CartDropdown = ({ cartItems, history, dispatch }) => ( 
+  //dispatch gets passed in via withRouter we have acces to that dispatch 
+  //improved user flow
   <div className='cart-dropdown'>
     <div className='cart-items'>
-      {cartItems.map(cartItem => (  //map  it out 
-        <CartItem key={cartItem.id} item={cartItem} />
-      ))}
+      {cartItems.length ? (
+        cartItems.map(cartItem => (
+          <CartItem key={cartItem.id} item={cartItem} />
+        ))
+      ) : (
+        <span className='empty-message'>Your cart is empty</span>
+      )}
     </div>
-    <CustomButton>GO TO CHECKOUT</CustomButton>
+    <CustomButton
+      onClick={() => {
+        history.push('/checkout');
+        dispatch(toggleCartHidden());
+      }}
+    >
+      GO TO CHECKOUT
+    </CustomButton>
   </div>
 );
 
@@ -31,9 +60,18 @@ const CartDropdown = ({ cartItems }) => (
 // const mapStateToProps = ({ cart: { cartItems } }) => ({
 //   cartItems
 // });
-const mapStateToProps = state => ({
-  cartItems: selectCartItems(state)
+//want the whole state, so can pass it in:
+// const mapStateToProps = state => ({
+//   cartItems: selectCartItems(state)
+// });
+// export default connect(mapStateToProps)(CartDropdown);
+
+const mapStateToProps = createStructuredSelector({
+  cartItems: selectCartItems
 });
-export default connect(mapStateToProps)(CartDropdown);
+
+
+// withRouter higher order componenet, connct must be wrapped around router
+export default withRouter(connect(mapStateToProps)(CartDropdown));
 
 // export default CartDropdown;

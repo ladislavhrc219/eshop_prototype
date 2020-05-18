@@ -5,8 +5,13 @@ import './header.scss';
 
 import { connect } from 'react-redux';
 
+import { createStructuredSelector } from 'reselect';
+
+
 import CartIcon from './../cart-icon/cart-icon.component';
 import CartDropDown from './../cart-dropdown/cart-dropdown.component';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import {auth} from './../../firebase/firebase.utils';
 
@@ -42,10 +47,17 @@ const Header = ({currentUser, hidden}) => (
 //need to destructure the state 
 // from the sate want user:currentUser
                             //instead of state
-const mapStateToProps = ({user: {currentUser}, cart: {hidden} }) => ({
-    currentUser,
-     hidden
-  });
+// const mapStateToProps = ({user: {currentUser}, cart: {hidden} }) => ({
+//     currentUser,
+//      hidden
+//   });
 
+
+
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hidden: selectCartHidden
+});
+  
 
 export default connect (mapStateToProps) (Header);
